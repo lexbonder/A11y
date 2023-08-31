@@ -9,13 +9,20 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
+        /* Hiding */
+//        Image(decorative: "headshot2")
+//            .resizable()
+//            .scaledToFit()
+//            .accessibilityHidden(true)
+        
+        /* Grouping */
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+            Text("Your score is")
+            Text("1000")
+                .font(.title)
         }
-        .padding()
+        .accessibilityElement(children: .ignore) // children: .ignore is default, will be accepted with ()
+        .accessibilityLabel("Your score is 1000")
     }
 }
 
